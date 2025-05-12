@@ -20,4 +20,3 @@
         }
     }
     $page = Route::routes();
-?>
