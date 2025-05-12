@@ -1,5 +1,5 @@
 <?php
-    include_once __DIR__ . '/controller/BaseController.php';
+  include_once __DIR__ . '/controller/BaseController.php';
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -15,7 +15,20 @@
     ?>
 
     <main>
-        <?php include_once __DIR__ . '/pages/$page.php'; ?>
+        <?php 
+        function routes(){
+                    $page = isset($_GET['page']) ? $_GET['page'] : 'default'; // Par défaut, 'default.php'
+        $page = basename($page); // Sécurise la variable pour éviter des inclusions non désirées
+        $filePath = __DIR__ . '/pages/' . $page . '.php';
+
+        if (file_exists($filePath)) {
+            include_once $filePath;
+        } else {
+            echo "<p>La page demandée n'existe pas.</p>";
+        }
+        }
+        routes();
+        ?>
     </main>
 
     <footer>
