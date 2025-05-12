@@ -1,6 +1,5 @@
 <?php
-
-
+    include_once __DIR__ . './controller/BaseController.php';
 ?>
 <!DOCTYPE html>
 <html lang="fr">
