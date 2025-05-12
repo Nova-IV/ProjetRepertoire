@@ -1,5 +1,5 @@
 <?php
-    include_once __DIR__ . './controller/BaseController.php';
+    include_once __DIR__ . '/controller/BaseController.php';
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -11,11 +11,11 @@
 </head>
 <body>
     <?php
-        include_once __DIR__ . './routes/route.php';
+        include_once __DIR__ . '/routes/route.php';
     ?>
 
     <main>
-        <?php include_once __DIR__ . './pages/$page.php'; ?>
+        <!--<?php include_once __DIR__ . '/pages/$page.php'; ?>-->
     </main>
 
     <footer>
